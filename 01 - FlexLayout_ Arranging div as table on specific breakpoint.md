@@ -3,6 +3,7 @@
 I've encountered a layout requirement to reorganize divs to table when in mobile view.
 
 **Visual Layout**
+
 Large Screen:
 (https://github.com/jengfad/hyperinfinitemonkey/blob/master/01.large-screen.JPG)
 
