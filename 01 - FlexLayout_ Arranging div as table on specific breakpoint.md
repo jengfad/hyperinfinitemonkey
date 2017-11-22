@@ -2,18 +2,24 @@
 
 I've encountered a layout requirement to reorganize divs to table when in mobile view.
 
-(layout image here)
+**Visual Layout**
+Large Screen:
+(https://github.com/jengfad/hyperinfinitemonkey/blob/master/01.large-screen.JPG)
+
+Small Screen:
+(https://github.com/jengfad/hyperinfinitemonkey/blob/master/01.small-screen.JPG)
 
 Here are the specifics:
 
-Large Screen: The yellow div holds green divs arranged in a row. Green divs holds 2 red divs on a column.
-Small Screen: The yellow div holds green divs arranged in a column. Green divs holds 2 red divs on a row.
+**Large Screen**: The yellow div holds green divs arranged in a row. Green divs holds 2 red divs on a column.
+
+**Small Screen**: The yellow div holds green divs arranged in a column. Green divs holds 2 red divs on a row.
 
 Notice that the two resolutions have opposite behavior when arranging the green and red divs. Since flex-layout is already integrated, this should be easier with the help of breakpoints and ngClass.
 
 Here is the code:
 
-HTML:
+**HTML**
 ```
 <div fxLayout="row" fxLayout.xs="column" class="table" ngClass.xs="table-mobile">
   <div fxLayout="column" fxLayout.xs="row" class="row">
@@ -36,7 +42,7 @@ HTML:
 
 ```
 
-CSS:
+**CSS**
 ```
 /**main**/
 .table-mobile {
@@ -62,7 +68,7 @@ A. HTML
     This is done thru the `fxLayout="row"` and `fxLayout="column"` tags on the divs.
 
 - For the small screen, we told flex-layout the vice-versa of large screen.
-On this one, we will be using a small screen breakpoint: `fxLayout.xs="row"`. `.xs` denotes that this will be triggered when the screen resolution has `max-width: 599px`. You can see details on breakpoints in here: https://github.com/angular/flex-layout/wiki/Responsive-API.
+On this one, we will be using a small screen breakpoint: `fxLayout.xs="row"`. `.xs` denotes that this will be triggered when the screen resolution has `max-width: 599px`. You can see details on breakpoints in [here](https://github.com/angular/flex-layout/wiki/Responsive-API).
 
 - Since the requirement wants to enforce a table-like layout on small screen, we used 'table-mobile' css class on .xs breakpoint: `ngClass.xs="table-mobile"`.
 
@@ -73,7 +79,7 @@ B. CSS
 - We have 3 rules for the 3 segments of our markup that mimics the behavior of `<table>` element.
 - `!important` tag was used to override the flex-layout styles. Note that in using `fxLayout` directives, it will automatically attached various styling attributes.
 
-Here is the plunkr demo: https://plnkr.co/edit/7rsHjF1T58exGZch2gAb?p=preview
+Here is the [plunkr demo](https://plnkr.co/edit/7rsHjF1T58exGZch2gAb?p=preview).
 
 As you play around, try the following:
 
