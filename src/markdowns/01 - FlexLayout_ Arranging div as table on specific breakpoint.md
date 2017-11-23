@@ -5,10 +5,14 @@ I've encountered a layout requirement to reorganize divs to table when in mobile
 **Visual Layout**
 
 Large Screen:
-(https://github.com/jengfad/hyperinfinitemonkey/blob/master/01.large-screen.JPG)
+![alt text][layout-large-screen]
+
+[layout-large-screen]: https://github.com/jengfad/hyperinfinitemonkey/raw/master/src/images/01.layout-large-screen.PNG ""
 
 Small Screen:
-(https://github.com/jengfad/hyperinfinitemonkey/blob/master/01.small-screen.JPG)
+![alt text][layout-small-screen]
+
+[layout-small-screen]: https://github.com/jengfad/hyperinfinitemonkey/raw/master/src/images/01.layout-small-screen.PNG ""
 
 Here are the specifics:
 
